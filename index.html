@@ -1,355 +1,373 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="en">\
-<head>\
-  <meta charset="UTF-8" />\
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />\
-  <title>Zion Little</title>\
-  <link rel="preconnect" href="https://fonts.googleapis.com">\
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">\
-  <style>\
-    *, *::before, *::after \{ box-sizing: border-box; margin: 0; padding: 0; \}\
-\
-    :root \{\
-      --ink:     #1a1a1a;\
-      --muted:   #555;\
-      --rule:    #d8d2c8;\
-      --accent:  #8b3a2a;\
-      --bg:      #faf8f4;\
-      --serif:   'EB Garamond', Georgia, serif;\
-      --sans:    'DM Sans', sans-serif;\
-    \}\
-\
-    html \{ font-size: 18px; \}\
-\
-    body \{\
-      background: var(--bg);\
-      color: var(--ink);\
-      font-family: var(--serif);\
-      line-height: 1.75;\
-      padding: 0 1.5rem;\
-    \}\
-\
-    /* \uc0\u9472 \u9472  Layout \u9472 \u9472  */\
-    .page \{\
-      max-width: 680px;\
-      margin: 0 auto;\
-      padding: 5rem 0 6rem;\
-    \}\
-\
-    /* \uc0\u9472 \u9472  Header \u9472 \u9472  */\
-    header \{\
-      margin-bottom: 3.5rem;\
-    \}\
-\
-    header h1 \{\
-      font-family: var(--serif);\
-      font-size: 2.4rem;\
-      font-weight: 500;\
-      letter-spacing: -0.01em;\
-      line-height: 1.15;\
-      margin-bottom: 0.35rem;\
-    \}\
-\
-    .affiliation \{\
-      font-family: var(--sans);\
-      font-size: 0.82rem;\
-      font-weight: 300;\
-      color: var(--muted);\
-      letter-spacing: 0.04em;\
-      text-transform: uppercase;\
-    \}\
-\
-    .affiliation a \{\
-      color: inherit;\
-      text-decoration: none;\
-      border-bottom: 1px solid var(--rule);\
-      transition: color 0.15s;\
-    \}\
-    .affiliation a:hover \{ color: var(--accent); \}\
-\
-    nav \{\
-      margin-top: 1.4rem;\
-      display: flex;\
-      gap: 1.6rem;\
-      flex-wrap: wrap;\
-    \}\
-\
-    nav a \{\
-      font-family: var(--sans);\
-      font-size: 0.82rem;\
-      font-weight: 500;\
-      letter-spacing: 0.05em;\
-      text-transform: uppercase;\
-      color: var(--muted);\
-      text-decoration: none;\
-      padding-bottom: 2px;\
-      border-bottom: 1.5px solid transparent;\
-      transition: color 0.15s, border-color 0.15s;\
-    \}\
-    nav a:hover \{\
-      color: var(--accent);\
-      border-bottom-color: var(--accent);\
-    \}\
-\
-    /* \uc0\u9472 \u9472  Sections \u9472 \u9472  */\
-    section \{\
-      margin-bottom: 3.2rem;\
-    \}\
-\
-    section h2 \{\
-      font-family: var(--sans);\
-      font-size: 0.75rem;\
-      font-weight: 500;\
-      letter-spacing: 0.12em;\
-      text-transform: uppercase;\
-      color: var(--accent);\
-      margin-bottom: 1rem;\
-    \}\
-\
-    hr.rule \{\
-      border: none;\
-      border-top: 1px solid var(--rule);\
-      margin-bottom: 1.2rem;\
-    \}\
-\
-    p \{ margin-bottom: 0.9rem; \}\
-    p:last-child \{ margin-bottom: 0; \}\
-\
-    /* \uc0\u9472 \u9472  Working Papers \u9472 \u9472  */\
-    .paper \{\
-      margin-bottom: 1.8rem;\
-      padding-bottom: 1.8rem;\
-      border-bottom: 1px solid var(--rule);\
-    \}\
-    .paper:last-child \{\
-      border-bottom: none;\
-      padding-bottom: 0;\
-    \}\
-\
-    .paper-title \{\
-      font-size: 1.05rem;\
-      font-weight: 500;\
-      margin-bottom: 0.25rem;\
-    \}\
-\
-    .paper-title a \{\
-      color: var(--ink);\
-      text-decoration: none;\
-      border-bottom: 1px solid var(--rule);\
-      transition: color 0.15s, border-color 0.15s;\
-    \}\
-    .paper-title a:hover \{\
-      color: var(--accent);\
-      border-bottom-color: var(--accent);\
-    \}\
-\
-    .paper-meta \{\
-      font-family: var(--sans);\
-      font-size: 0.8rem;\
-      color: var(--muted);\
-      margin-bottom: 0.5rem;\
-    \}\
-\
-    .paper-abstract \{\
-      font-size: 0.95rem;\
-      color: #444;\
-    \}\
-\
-    .tag \{\
-      display: inline-block;\
-      font-family: var(--sans);\
-      font-size: 0.7rem;\
-      font-weight: 500;\
-      letter-spacing: 0.04em;\
-      text-transform: uppercase;\
-      color: var(--accent);\
-      border: 1px solid var(--accent);\
-      border-radius: 2px;\
-      padding: 1px 6px;\
-      margin-left: 0.5rem;\
-      vertical-align: middle;\
-      opacity: 0.75;\
-    \}\
-\
-    /* \uc0\u9472 \u9472  Contact \u9472 \u9472  */\
-    .contact-line \{\
-      font-family: var(--sans);\
-      font-size: 0.9rem;\
-      color: var(--muted);\
-      margin-bottom: 0.4rem;\
-    \}\
-    .contact-line a \{\
-      color: var(--ink);\
-      text-decoration: none;\
-      border-bottom: 1px solid var(--rule);\
-      transition: color 0.15s;\
-    \}\
-    .contact-line a:hover \{ color: var(--accent); \}\
-\
-    /* \uc0\u9472 \u9472  Footer \u9472 \u9472  */\
-    footer \{\
-      margin-top: 5rem;\
-      padding-top: 1.5rem;\
-      border-top: 1px solid var(--rule);\
-      font-family: var(--sans);\
-      font-size: 0.75rem;\
-      color: #aaa;\
-    \}\
-\
-    @media (max-width: 480px) \{\
-      html \{ font-size: 16px; \}\
-      header h1 \{ font-size: 2rem; \}\
-    \}\
-  </style>\
-</head>\
-<body>\
-<div class="page">\
-\
-  <!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \
-       HEADER \'97 replace everything in ALL CAPS\
-  \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
-  <header>\
-    <h1>Zion Little</h1>\
-    <div class="affiliation">\
-      PhD Candidate &nbsp;\'b7&nbsp;\
-      Department of Political Science &nbsp;\'b7&nbsp;\
-      <a href="https://polisci.washu.edu/people/zion-little">Washington University in St. Louis</a>\
-    </div>\
-\
-    <nav>\
-      <a href="#papers">Working Papers</a>\
-      <a href="cv.pdf" target="_blank">CV</a>\
-      <a href="#contact">Contact</a>\
-    </nav>\
-  </header>\
-\
-\
-  <!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \
-       BIO / ABOUT\
-       Write 2\'963 sentences: who you are, what\
-       you work on, and your job market status\
-       (if applicable).\
-  \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
-  <section id="about">\
-    <p>\
-      Welcome! I am a PhD candidate in the Political Science department at Washington University in St. Louis.\
-      I'm a formal theorist studying the political economy of attention, bureaucratic capacity and public trust,\
-      and signaling structures that shape information and learning. My work models how political actors manipulate\
-      attention and information to influence what people learn and what that means for public welfare and\
-      accountability. The aim is twofold: to deepen our understanding of how attention shapes accountability,\
-      institutional trust, and capacity, and to produce clear, testable predictions about these relationships.\
-    </p>\
-    <p>\
-      Before grad school, I received my BA in Political Science and Economics from the University of Illinois\
-      at Urbana-Champaign.\
-    </p>\
-    <p>\
-      I will be on the job market in the 2026\'962027 academic year.\
-    </p>\
-  </section>\
-\
-\
-  <!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \
-       WORKING PAPERS\
-       Duplicate the .paper block for each paper.\
-       For the abstract, 1\'963 sentences is fine.\
-       Tags: "Job Market Paper", "R&R", etc.\
-  \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
-  <section id="papers">\
-    <h2>Working Papers</h2>\
-    <hr class="rule">\
-\
-    <div class="paper">\
-      <div class="paper-title">\
-        Strategic Attention Capture: Flooding the Zone and Attention Management\
-        <span class="tag">Job Market Paper</span>\
-      </div>\
-      <div class="paper-meta">Coming soon</div>\
-    </div>\
-\
-    <div class="paper">\
-      <div class="paper-title">\
-        Managing Relationships: Bureaucratic Discretion and Credibility\
-      </div>\
-      <div class="paper-meta">Draft available upon request</div>\
-    </div>\
-\
-    <div class="paper">\
-      <div class="paper-title">\
-        Preregistration and Strategic Private Experimentation\
-      </div>\
-      <div class="paper-meta">With Keith Schnakenberg &amp; Jacob Montgomery &nbsp;\'b7&nbsp; Coming soon</div>\
-    </div>\
-\
-    <div class="paper">\
-      <div class="paper-title">\
-        Attentive Cheap Talk\
-      </div>\
-      <div class="paper-meta">Coming soon</div>\
-    </div>\
-\
-    <div class="paper">\
-      <div class="paper-title">\
-        Laboratories of Democracy: State Policy Experimentation and Partisan Learning\
-      </div>\
-      <div class="paper-meta">Coming soon</div>\
-    </div>\
-\
-  </section>\
-\
-\
-  <!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \
-       PUBLICATIONS (optional)\
-       Uncomment this whole section if you have\
-       published work (peer-reviewed or otherwise).\
-  \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
-  <!--\
-  <section id="publications">\
-    <h2>Publications</h2>\
-    <hr class="rule">\
-\
-    <div class="paper">\
-      <div class="paper-title">\
-        <a href="JOURNAL_LINK">PAPER TITLE</a>\
-      </div>\
-      <div class="paper-meta">\
-        <em>JOURNAL NAME</em>, Vol. X, No. Y (YEAR), pp. Z\'96ZZ.\
-        With CO-AUTHOR (if any).\
-      </div>\
-    </div>\
-\
-  </section>\
-  -->\
-\
-\
-  <!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \
-       CONTACT\
-  \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
-  <section id="contact">\
-    <h2>Contact</h2>\
-    <hr class="rule">\
-    <p class="contact-line">\
-      <a href="mailto:l.zion@wustl.edu">l.zion@wustl.edu</a>\
-    </p>\
-    <p class="contact-line">\
-      Department of Political Science &nbsp;\'b7&nbsp; Washington University in St. Louis<br>\
-      MSC 1063-228-249, One Brookings Drive<br>\
-      St. Louis, MO 63130\
-    </p>\
-  </section>\
-\
-\
-  <footer>\
-    Last updated: MAY 2026\
-  </footer>\
-\
-</div>\
-</body>\
-</html>}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;Zion Little&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>:root {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--ink: <span class="Apple-converted-space">    </span>#1a1a1a;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--muted: <span class="Apple-converted-space">  </span>#555;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--rule:<span class="Apple-converted-space">    </span>#d8d2c8;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--accent:<span class="Apple-converted-space">  </span>#8b3a2a;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--bg:<span class="Apple-converted-space">      </span>#faf8f4;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--card-bg: #fefdfb;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--serif: <span class="Apple-converted-space">  </span>'EB Garamond', Georgia, serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--sans:<span class="Apple-converted-space">    </span>'DM Sans', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>html { font-size: 18px; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: var(--bg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--ink);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: var(--serif);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>line-height: 1.75;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 0 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* ── Layout ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.page {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 720px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0 auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 5rem 0 6rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* ── Header ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>header {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 3.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-bottom: 1.6rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid var(--rule);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>header h1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: var(--serif);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 2.4rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: 500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>letter-spacing: -0.01em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>line-height: 1.15;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 0.35rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.affiliation {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: var(--sans);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 0.82rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: 300;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>letter-spacing: 0.04em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.affiliation a {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: inherit;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-decoration: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid var(--rule);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: color 0.15s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.affiliation a:hover { color: var(--accent); }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>nav {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 1.4rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gap: 1.6rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>nav a {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: var(--sans);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 0.82rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: 500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>letter-spacing: 0.05em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-decoration: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-bottom: 2px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-bottom: 1.5px solid transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: color 0.15s, border-color 0.15s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>nav a:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-bottom-color: var(--accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Stand‑out CV button */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>nav a[href="cv.pdf"] {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1.5px solid var(--accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 2px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 4px 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: -4px 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>nav a[href="cv.pdf"]:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: var(--accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-bottom-color: var(--accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* ── Sections ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>section {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 3.2rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>section h2 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: var(--sans);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 0.75rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: 500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>letter-spacing: 0.12em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>section h2::after {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>content: "";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>height: 1px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: var(--rule);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-left: 0.8rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 2px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>hr.rule {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: none;<span class="Apple-converted-space">                </span>/* replaced by the inline ::after line */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>p { margin-bottom: 0.9rem; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>p:last-child { margin-bottom: 0; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* ── Working Papers (cards) ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.paper {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: var(--card-bg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-left: 3px solid var(--accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 1.2rem 1.4rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 1px 3px rgba(0,0,0,0.04);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 2px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: box-shadow 0.2s, transform 0.1s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-bottom: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.paper:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 2px 8px rgba(0,0,0,0.08);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transform: translateY(-1px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.paper:last-child {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-bottom: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-bottom: 1.2rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.paper-title {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 1.05rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: 500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 0.3rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.paper-title a {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--ink);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-decoration: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-bottom: 1px dotted var(--rule);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: color 0.15s, border-color 0.15s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.paper-title a:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-bottom-color: var(--accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.paper-meta {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: var(--sans);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.paper-abstract {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #444;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.tag {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: inline-block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: var(--sans);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 0.68rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: 500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>letter-spacing: 0.04em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: var(--accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 2px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 2px 7px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-left: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>vertical-align: middle;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>opacity: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* ── Contact ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.contact-line {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: var(--sans);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 0.4rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.contact-line a {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--ink);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-decoration: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid var(--rule);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: color 0.15s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.contact-line a:hover { color: var(--accent); }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* ── Footer ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>footer {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-top: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-top: 1px solid var(--rule);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: var(--sans);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 0.75rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #aaa;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media (max-width: 480px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>html { font-size: 16px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>header h1 { font-size: 2rem; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.paper {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>padding: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin-bottom: 1.2rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="page"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- ═══════════════════════════════════════════</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>HEADER</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>════════════════════════════════════════════ --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;header&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Zion Little&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="affiliation"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>PhD Candidate &amp;nbsp;·&amp;nbsp;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Department of Political Science &amp;nbsp;·&amp;nbsp;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="https://polisci.washu.edu/people/zion-little"&gt;Washington University in St. Louis&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;nav&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#papers"&gt;Working Papers&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="cv.pdf" target="_blank"&gt;CV&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#contact"&gt;Contact&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- ═══════════════════════════════════════════</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>BIO / ABOUT</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>════════════════════════════════════════════ --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section id="about"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Welcome! I am a PhD candidate in the Political Science department at Washington University in St. Louis.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>I'm a formal theorist studying the political economy of attention, bureaucratic capacity and public trust,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>and signaling structures that shape information and learning. My work models how political actors manipulate</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>attention and information to influence what people learn and what that means for public welfare and</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>accountability. The aim is twofold: to deepen our understanding of how attention shapes accountability,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>institutional trust, and capacity, and to produce clear, testable predictions about these relationships.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Before grad school, I received my BA in Political Science and Economics from the University of Illinois</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>at Urbana-Champaign.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>I will be on the job market in the 2026–2027 academic year.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- ═══════════════════════════════════════════</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>WORKING PAPERS</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>════════════════════════════════════════════ --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section id="papers"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Working Papers&lt;/h2&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="paper"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="paper-title"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>Strategic Attention Capture: Flooding the Zone and Attention Management</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;span class="tag"&gt;Job Market Paper&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="paper-meta"&gt;Coming soon&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="paper"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="paper-title"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>Managing Relationships: Bureaucratic Discretion and Credibility</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="paper-meta"&gt;Draft available upon request&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="paper"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="paper-title"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>Preregistration and Strategic Private Experimentation</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="paper-meta"&gt;With Keith Schnakenberg &amp;amp; Jacob Montgomery &amp;nbsp;·&amp;nbsp; Coming soon&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="paper"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="paper-title"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>Attentive Cheap Talk</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="paper-meta"&gt;Coming soon&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="paper"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="paper-title"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>Laboratories of Democracy: State Policy Experimentation and Partisan Learning</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="paper-meta"&gt;Coming soon&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- ═══════════════════════════════════════════</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>CONTACT</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>════════════════════════════════════════════ --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section id="contact"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Contact&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="contact-line"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="mailto:l.zion@wustl.edu"&gt;l.zion@wustl.edu&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="contact-line"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Department of Political Science &amp;nbsp;·&amp;nbsp; Washington University in St. Louis&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>MSC 1063-228-249, One Brookings Drive&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>St. Louis, MO 63130</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>Last updated: MAY 2026</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
